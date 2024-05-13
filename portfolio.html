@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidra's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    /* Import Google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffc107;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #about {
+      background-color: #ffc107;
+      color: #333;
+      text-align: center;
+    }
+
+    #skills {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    #skills ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #skills ul li {
+      margin: 5px 10px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    #bio {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    #contact {
+      background-color: #dc3545;
+      color: #fff;
+    }
+
+    #contact-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 3px;
+      border: none;
+    }
+
+    #contact-form button {
+      padding: 10px;
+      background-color: #ffc107;
+      color: #333;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #contact-form button:hover {
+      background-color: #e0a800;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer i {
+      margin: 0 5px;
+      transition: color 0.3s;
+    }
+
+    footer i:hover {
+      color: #ffc107;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sidra's Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a passionate and dedicated second-year engineering student with a strong interest in content writing, report writing, and dashboard creation. With excellent English proficiency in speaking and listening, I strive to deliver high-quality work.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Content Writing</li>
+        <li>Report Writing</li>
+        <li>Dashboard Creation</li>
+        <li>English Proficiency</li>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>Node.js</li>
+        <li>Angular.js</li>
+        <li>C</li>
+        <li>C++</li>
+        <li>Data Structures</li>
+        <li>Algorithms</li>
+      </ul>
+    </section>
+
+    <section id="bio">
+      <h2>Short Bio</h2>
+      <p>I have written an IEEE international conference paper, showcasing my research and writing abilities. Along with content writing, I am deeply interested in web development. I have completed projects like a loan prediction model and a car rental system, demonstrating my proficiency in web development technologies.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Phone: 7869250000</p>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Sidra's Portfolio</p>
+    <p>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get the form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Do something with the form data, e.g., send an email
+      console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+
+      // Reset the form
+      form.reset();
+
+      // Show a success message or perform any other desired action
+      alert('Thank you for your message!');
+    });
+  </script>
+</head>
+<body>
